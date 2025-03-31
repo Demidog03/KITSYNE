@@ -1,38 +1,38 @@
-import {useMemo} from 'react';
-import {ApolloClient, HttpLink, InMemoryCache, NormalizedCacheObject} from '@apollo/client';
+import { useMemo } from 'react';
+import { ApolloClient, HttpLink, InMemoryCache, NormalizedCacheObject } from '@apollo/client';
 
 let apolloClient: ApolloClient<NormalizedCacheObject> | undefined;
 
 function createApolloClient() {
-    return new ApolloClient({
-        ssrMode: typeof window === 'undefined',
-        link: new HttpLink({
-            uri: 'YOUR_GRAPHQL_ENDPOINT',
-            credentials: 'same-origin',
-        }),
-        cache: new InMemoryCache(),
-    });
+  return new ApolloClient({
+    ssrMode: typeof window === 'undefined',
+    link: new HttpLink({
+      uri: 'YOUR_GRAPHQL_ENDPOINT',
+      credentials: 'same-origin',
+    }),
+    cache: new InMemoryCache(),
+  });
 }
 
 export function initializeApollo(initialState: Record<string, any> | null = null) {
-    const _apolloClient = apolloClient ?? createApolloClient();
+  const _apolloClient = apolloClient ?? createApolloClient();
 
-    if (initialState) {
-        const existingCache = _apolloClient.extract();
+  if (initialState) {
+    const existingCache = _apolloClient.extract();
 
-        _apolloClient.cache.restore({ ...existingCache, ...initialState });
-    }
+    _apolloClient.cache.restore({ ...existingCache, ...initialState });
+  }
 
-    // For SSG and SSR always create a new Apollo Client
-    if (typeof window === 'undefined') return _apolloClient;
+  // For SSG and SSR always create a new Apollo Client
+  if (typeof window === 'undefined') return _apolloClient;
 
-    if (!apolloClient) apolloClient = _apolloClient;
+  if (!apolloClient) apolloClient = _apolloClient;
 
-    return _apolloClient;
+  return _apolloClient;
 }
 
 export function useApollo(initialState: any) {
-    return useMemo(() => initializeApollo(initialState), [initialState]);
+  return useMemo(() => initializeApollo(initialState), [initialState]);
 }
 
 //NOTE: use in ssr component

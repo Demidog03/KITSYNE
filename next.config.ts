@@ -1,25 +1,16 @@
-import type { NextConfig } from "next";
-import withLess from "next-with-less";
-import type { Configuration as WebpackConfig } from 'webpack';
+import type { NextConfig } from 'next';
+import withAntdLess from 'next-plugin-antd-less';
+import withLess from 'next-with-less';
 
-const nextConfig: NextConfig = withLess({
+const nextConfig: NextConfig = withAntdLess(
+  withLess({
     reactStrictMode: false,
-    webpack: (config: WebpackConfig) => {
-        // config.infrastructureLogging = { debug: /PackFileCache/ }
-        config.module?.rules?.push({});
-        return config;
+    webpack: (config: NextConfig) => {
+      // config.infrastructureLogging = { debug: /PackFileCache/ }
+      config.module?.rules?.push({});
+      return config;
     },
-    cssLoaderOptions: {
-        modules: {
-            auto: (resourcePath: string) => resourcePath.endsWith('.module.less'),
-            localIdentName: '[local]__[hash:base64:5]',
-        },
-    },
-    lessLoaderOptions: {
-        lessOptions: {
-            javascriptEnabled: true,
-        },
-    },
-});
+  })
+);
 
 export default nextConfig;

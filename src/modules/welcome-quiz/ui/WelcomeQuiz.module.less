@@ -1,0 +1,184 @@
+@color-bg: #fefaf3;
+@color-title: #3b2f2f;
+@color-subtitle: #9c2f20;
+@color-text-white: white;
+@shadow-glow: rgba(255, 203, 112, 0.4);
+@shadow-glow-light: rgba(255, 203, 112, 0.1);
+
+@btn-bg: #1f4e49;
+@btn-hover: #2f6f66;
+@btn-text: #ffffff;
+
+@color-dark-bg: #3b2f2f;
+@color-bubble-bg: #ffffff;
+@color-bubble-text: @color-dark-bg;
+@color-highlight: #9c2f20;
+
+.header {
+  min-height: 100vh;
+  background-color: @color-bg !important;
+  position: relative;
+  overflow: hidden;
+
+  .container {
+    height: 100%;
+  }
+
+  .title {
+    font-weight: 900;
+    letter-spacing: 4px;
+    font-size: 5rem;
+    color: @color-title;
+    transition: transform 0.3s ease;
+    margin-bottom: 0;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  .subTitle {
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: @color-subtitle;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  .bubbleText {
+    color: @color-text-white !important;
+    letter-spacing: 2px;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  .imageWrapper {
+    height: 90%;
+    width: auto;
+    position: absolute;
+    bottom: -2%;
+    right: 5%;
+
+    .imageContainer {
+      transition: transform 0.3s ease;
+      &:hover {
+        transform: scale(1.02) rotate(1deg);
+      }
+    }
+  }
+
+  .mainImage {
+    height: 100%;
+    width: auto;
+    filter: drop-shadow(0 0 15px @shadow-glow);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    will-change: transform;
+  }
+
+  .foxContainer {
+    height: 50%;
+    width: auto;
+    position: absolute;
+    bottom: -5%;
+    left: 8%;
+    transition: transform 0.3s ease;
+    transform: scaleX(-1);
+
+    &:hover {
+      transform: scaleX(-1.02) scaleY(1.02) rotate(1deg);
+    }
+
+    .foxImage {
+      height: 100%;
+      width: auto;
+      filter: drop-shadow(0 0 15px @shadow-glow);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      will-change: transform;
+    }
+  }
+
+  .kitsyneBtn {
+    max-width: 100px;
+    width: 100%;
+    background-color: @btn-bg !important;
+    color: @btn-text !important;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(44, 110, 73, 0.3);
+    transition:
+      background-color 0.3s ease,
+      transform 0.2s ease;
+    line-height: 1; // ToD0: Change line height for all buttons
+
+    &:hover {
+      background-color: @btn-hover !important;
+      transform: translateY(-2px) scale(1.02);
+    }
+
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+}
+
+.main {
+  min-height: 100vh !important;
+  padding: 20px;
+  background-color: @color-title !important;
+  position: relative;
+  overflow: hidden;
+
+  .container {
+    height: 100%;
+  }
+
+  .chatBox {
+    max-width: 600px;
+    width: 100%;
+    background: @color-text-white !important;
+    padding: 20px;
+    border-radius: 14px;
+    position: relative;
+    align-self: center;
+  }
+
+  .title {
+    font-size: 2.2rem;
+    margin-top: 20px;
+    color: @color-text-white !important;
+    text-align: center;
+  }
+
+  .chatBoxTitle {
+    color: @color-bubble-text !important;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .input {
+    margin-bottom: 12px;
+    font-size: 1rem;
+    border-radius: 8px;
+  }
+
+  .nextBtn {
+    margin-top: 16px;
+    width: 100%;
+    max-width: 120px;
+  }
+
+  .mainImage {
+    width: auto;
+    height: 80%;
+    object-fit: contain;
+    position: absolute;
+    bottom: -20%;
+    right: 0;
+  }
+}
