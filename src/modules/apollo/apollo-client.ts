@@ -14,7 +14,7 @@ function createApolloClient() {
   });
 }
 
-export function initializeApollo(initialState: Record<string, any> | null = null) {
+export function initializeApollo(initialState: Record<string, never> | null = null) {
   const _apolloClient = apolloClient ?? createApolloClient();
 
   if (initialState) {
@@ -31,7 +31,7 @@ export function initializeApollo(initialState: Record<string, any> | null = null
   return _apolloClient;
 }
 
-export function useApollo(initialState: any) {
+export function useApollo(initialState: never) {
   return useMemo(() => initializeApollo(initialState), [initialState]);
 }
 

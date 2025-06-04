@@ -5,7 +5,7 @@ import { ApolloClient, ApolloProvider, HttpLink, InMemoryCache } from '@apollo/c
 
 interface ApolloProviderProps {
   children: React.ReactNode;
-  initialApolloState?: any;
+  initialApolloState?: never;
 }
 
 export function ApolloProviderWrapper({ children, initialApolloState }: ApolloProviderProps) {
