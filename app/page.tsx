@@ -12,3 +12,5 @@ export default function HomePage() {
     </Layout>
   );
 }
+
+// типа меняю задний фон
