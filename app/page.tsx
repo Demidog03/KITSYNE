@@ -14,3 +14,4 @@ export default function HomePage() {
 }
 
 // типа меняю задний фон
+// че то подправил
