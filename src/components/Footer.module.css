@@ -1,0 +1,51 @@
+.footer {
+   width: 100%;
+   background-color: #3b2f2f;
+   color: #ffffff;
+   font-size: 14px;
+   font-weight: 500;
+   display: flex;
+   justify-content: center;
+   padding: 1rem;
+}
+
+.footerContent {
+   width: 100%;
+   max-width: 350px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   gap: 10px;
+   flex-wrap: wrap;
+}
+
+.footerTop {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 40px;
+   line-height: 1;
+}
+
+.footer p {
+   padding-top: 15px; /* добавил паддинг т.к. текст почему-то распологается выше логотипа игнорируя align-items */
+}
+
+.footerLogo {
+   display: block;
+}
+
+@media (min-width: 600px) {
+   .footer {
+      font-size: 15px;
+      padding: 2rem;
+   }
+}
+
+@media (min-width: 1024px) {
+   .footer {
+      font-size: 16px;
+      padding: 2.5rem 3rem;
+   }
+}

@@ -3,6 +3,7 @@ import { CounterStoreProvider } from '@/modules/counter/model/counter-store-prov
 import { AntdRegistry } from '@ant-design/nextjs-registry';
 import '@ant-design/v5-patch-for-react-19';
 import '@styles/global.css';
+import Footer from '@components/Footer';
 
 export const metadata = {
   title: 'KITSYNE',
@@ -14,7 +15,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body>
         <AntdRegistry>
-          <CounterStoreProvider>{children}</CounterStoreProvider>
+          <CounterStoreProvider>
+            <main style={{ flex: 1 }}>{children}</main>
+            <Footer />
+            </CounterStoreProvider>
         </AntdRegistry>
       </body>
     </html>
