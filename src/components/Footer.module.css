@@ -3,7 +3,7 @@
    background-color: #3b2f2f;
    color: #ffffff;
    font-size: 14px;
-   font-weight: 500;
+   font-weight: 400; /* изменил размер */
    display: flex;
    justify-content: center;
    padding: 1rem;
@@ -11,7 +11,7 @@
 
 .footerContent {
    width: 100%;
-   max-width: 350px;
+   max-width: 350px; /* При ширине 275px, как указано в Figma, текст не помещается в одну строку */
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -28,8 +28,9 @@
    line-height: 1;
 }
 
-.footer p {
-   padding-top: 15px; /* добавил паддинг т.к. текст почему-то распологается выше логотипа игнорируя align-items */
+.footerTop p {
+   padding-top: 15px;
+   /* добавил паддинг т.к. текст почему-то располагается выше логотипа игнорируя align-items */
 }
 
 .footerLogo {
