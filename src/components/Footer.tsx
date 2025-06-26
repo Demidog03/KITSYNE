@@ -6,7 +6,7 @@ export default function Footer() {
       <footer className={styles.footer}>
          <div className={styles.footerContent}>
             <div className={styles.footerTop}>
-               <p>Kitsune</p>
+               <p>Kitsyne</p>
                <Image 
                   className={styles.footerLogo}
                   src="/kitsyne-footer-logo.svg"
