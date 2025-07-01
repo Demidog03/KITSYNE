@@ -10,7 +10,7 @@ import { useRouter } from 'next/navigation';
 const Login: React.FC = () => {
   const router = useRouter();
 
-  const onFinish = (values: any) => {
+  const onFinish = (values: unknown) => {
     console.log('✅ Form values:', values);
     alert("Login success! Redirecting...");
     router.push('/');

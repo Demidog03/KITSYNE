@@ -10,7 +10,7 @@ import { useRouter } from 'next/navigation';
 const Register: React.FC = () => {
   const router = useRouter();
 
-  const onFinish = (values: any) => {
+  const onFinish = (values: unknown) => {
     console.log('✅ Form values:', values);
     alert("You have successfully registered! Redirecting...");
     router.push('/'); 
