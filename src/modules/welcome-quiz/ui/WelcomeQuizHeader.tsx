@@ -15,11 +15,16 @@ import {
 } from '@lib/animations/motionPresets';
 import DialogBubble from '@shared/dialog-bubble/DialogBubble';
 import classes from './WelcomeQuiz.module.less';
+import Link from 'next/link';
+
+
+
 
 const { Header } = Layout;
 const MotionImage = motion(Image);
 const MotionButton = motion(Button);
 
+  
 const WelcomeQuizHeader = () => {
   const handleClick = () => {
     document.getElementById('welcome-main-section')?.scrollIntoView({ behavior: 'smooth' });
@@ -27,6 +32,11 @@ const WelcomeQuizHeader = () => {
 
   return (
     <Header className={classes.header}>
+      <div>
+      <Link href="/login">
+        <Button type="primary">Войти</Button>
+      </Link>
+      </div>
       <Flex className={classes.container} gap="middle" align="center" justify="center" vertical>
         <motion.div {...fadeScaleIn(1, 0)}>
           <Title className={classes.title}>KITSYNE</Title>
