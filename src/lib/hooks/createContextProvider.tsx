@@ -42,6 +42,7 @@ export default function createContextProvider<TStore, TName extends string>(
     return useZustandStore(storeContext, selector);
   };
 
+  console.log()
   return {
     [`${capitalizedName}StoreProvider`]: StoreProvider,
     [`use${capitalizedName}Store`]: useStore,
