@@ -5,7 +5,9 @@ import { LockOutlined, UserOutlined } from '@ant-design/icons';
 import { Button, Form, Input, Flex, Checkbox } from 'antd';
 import styles from "./styles.module.less";
 import Link from 'next/link';
-import { useRouter } from 'next/navigation'; 
+import { useRouter } from 'next/navigation';
+
+
 
 const Login: React.FC = () => {
   const router = useRouter();
@@ -18,6 +20,12 @@ const Login: React.FC = () => {
 
   return (
     <div className={styles.container}>
+      <div className={styles.backButton}>
+       <Button type="link" onClick={() => router.push("/")}>
+        ← Back to Home
+       </Button>
+      </div>
+
       <div className={styles.formWrapper}>
         <img alt="avatar" src="/login-image.jpg" className={styles.loginImage} />
 

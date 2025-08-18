@@ -18,6 +18,12 @@ const Register: React.FC = () => {
 
   return (
     <div className={styles.container}>
+      <div className={styles.backButton}>
+       <Button type="link" onClick={() => router.push("/")}>
+        ← Back to Home
+       </Button>
+      </div>
+
       <div className={styles.formWrapper}>
         <img alt="avatar" src="/login-image.jpg" className={styles.loginImage} />
 
