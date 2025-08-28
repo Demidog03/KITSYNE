@@ -40,7 +40,7 @@ importers:
         version: 1.8.0(webpack@5.98.0)
       next-with-less:
         specifier: ^3.0.1
-        version: 3.0.1(less-loader@12.2.0(less@4.2.2)(webpack@5.98.0))(less@4.2.2)(next@15.3.0-canary.20(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(sass@1.86.0))
+        version: 3.0.1(less-loader@12.3.0(less@4.4.1)(webpack@5.98.0))(less@4.4.1)(next@15.3.0-canary.20(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(sass@1.86.0))
       react:
         specifier: ^19.0.0
         version: 19.0.0
@@ -78,6 +78,12 @@ importers:
       eslint-plugin-prettier:
         specifier: ^5.2.5
         version: 5.2.5(@types/eslint@9.6.1)(eslint-config-prettier@10.1.1(eslint@9.22.0))(eslint@9.22.0)(prettier@3.5.3)
+      less:
+        specifier: ^4.3.0
+        version: 4.4.1
+      less-loader:
+        specifier: ^12.3.0
+        version: 12.3.0(less@4.4.1)(webpack@5.98.0)
       prettier:
         specifier: ^3.5.3
         version: 3.5.3
@@ -1718,8 +1724,8 @@ packages:
     resolution: {integrity: sha512-MbjN408fEndfiQXbFQ1vnd+1NoLDsnQW41410oQBXiyXDMYH5z505juWa4KUE1LqxRC7DgOgZDbKLxHIwm27hA==}
     engines: {node: '>=0.10'}
 
-  less-loader@12.2.0:
-    resolution: {integrity: sha512-MYUxjSQSBUQmowc0l5nPieOYwMzGPUaTzB6inNW/bdPEG9zOL3eAAD1Qw5ZxSPk7we5dMojHwNODYMV1hq4EVg==}
+  less-loader@12.3.0:
+    resolution: {integrity: sha512-0M6+uYulvYIWs52y0LqN4+QM9TqWAohYSNTo4htE8Z7Cn3G/qQMEmktfHmyJT23k+20kU9zHH2wrfFXkxNLtVw==}
     engines: {node: '>= 18.12.0'}
     peerDependencies:
       '@rspack/core': 0.x || 1.x
@@ -1738,9 +1744,9 @@ packages:
       less: ^3.5.0 || ^4.0.0
       webpack: ^4.0.0 || ^5.0.0
 
-  less@4.2.2:
-    resolution: {integrity: sha512-tkuLHQlvWUTeQ3doAqnHbNn8T6WX1KA8yvbKG9x4VtKtIjHsVKQZCH11zRgAfbDAXC2UNIg/K9BYAAcEzUIrNg==}
-    engines: {node: '>=6'}
+  less@4.4.1:
+    resolution: {integrity: sha512-X9HKyiXPi0f/ed0XhgUlBeFfxrlDP3xR4M7768Zl+WXLUViuL9AOPPJP4nCV0tgRWvTYvpNmN0SFhZOQzy16PA==}
+    engines: {node: '>=14'}
     hasBin: true
 
   levn@0.4.1:
@@ -4567,21 +4573,21 @@ snapshots:
     dependencies:
       language-subtag-registry: 0.3.23
 
-  less-loader@12.2.0(less@4.2.2)(webpack@5.98.0):
+  less-loader@12.3.0(less@4.4.1)(webpack@5.98.0):
     dependencies:
-      less: 4.2.2
+      less: 4.4.1
     optionalDependencies:
       webpack: 5.98.0
 
-  less-loader@7.3.0(less@4.2.2)(webpack@5.98.0):
+  less-loader@7.3.0(less@4.4.1)(webpack@5.98.0):
     dependencies:
       klona: 2.0.6
-      less: 4.2.2
+      less: 4.4.1
       loader-utils: 2.0.4
       schema-utils: 3.3.0
       webpack: 5.98.0
 
-  less@4.2.2:
+  less@4.4.1:
     dependencies:
       copy-anything: 2.0.6
       parse-node-version: 1.0.1
@@ -4708,18 +4714,18 @@ snapshots:
   next-plugin-antd-less@1.8.0(webpack@5.98.0):
     dependencies:
       clone: 2.1.2
-      less: 4.2.2
-      less-loader: 7.3.0(less@4.2.2)(webpack@5.98.0)
+      less: 4.4.1
+      less-loader: 7.3.0(less@4.4.1)(webpack@5.98.0)
       loader-utils: 3.3.1
       null-loader: 4.0.1(webpack@5.98.0)
     transitivePeerDependencies:
       - webpack
 
-  next-with-less@3.0.1(less-loader@12.2.0(less@4.2.2)(webpack@5.98.0))(less@4.2.2)(next@15.3.0-canary.20(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(sass@1.86.0)):
+  next-with-less@3.0.1(less-loader@12.3.0(less@4.4.1)(webpack@5.98.0))(less@4.4.1)(next@15.3.0-canary.20(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(sass@1.86.0)):
     dependencies:
       clone-deep: 4.0.1
-      less: 4.2.2
-      less-loader: 12.2.0(less@4.2.2)(webpack@5.98.0)
+      less: 4.4.1
+      less-loader: 12.3.0(less@4.4.1)(webpack@5.98.0)
       next: 15.3.0-canary.20(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(sass@1.86.0)
 
   next@15.3.0-canary.20(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(sass@1.86.0):

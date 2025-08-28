@@ -1,0 +1,157 @@
+.section {
+  padding: 40px 20px; /* убрал запятую */
+  background-color: #fefaf3;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+}
+
+.title {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  color: #3B2F2F;
+  max-width: 100%;
+  margin: 0 auto 50px;
+  text-align: center;
+  transform: translateY(-60px);
+
+  font-size: clamp(24px, 5vw, 38px); 
+  line-height: clamp(32px, 6vw, 46px);
+  overflow: hidden;                   
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 1024px) {
+  .title {
+    transform: translateY(0); /* на планшете и мобильных опускаем */
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;     
+  justify-content: center;  
+  height: 100%;             
+  gap: 12px;                
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: clamp(20px, 10vw, 150px);
+  justify-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  align-items: center;
+  flex-wrap: wrap;
+  transition: gap 0.3s ease;
+}
+
+.card {
+  background: #3a2d29;
+  color: #fff;
+  border-radius: 19px;
+  padding: 25px 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, width 0.3s ease, height 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  flex: 1 1 300px; /* 1 = grow, 1 = shrink, 300px = базовый размер */
+  max-width: 400px;
+}
+
+/* индивидуальные размеры карточек для больших экранов */
+.card1 { width: 346px; height: 199px; }
+.card2 { width: 416px; height: 168px; }
+.card3 { width: 355px; height: 199px; }
+
+/* при сужении экрана карты уменьшаются и переходят в колонку */
+@media (max-width: 1024px) {
+  .card1, .card2, .card3 {
+    width: 80%; 
+    height: auto; /* высота под контент */
+  }
+}
+
+@media (max-width: 600px) {
+  .cards {
+    grid-template-columns: 1fr; /* одна колонка */
+    gap: 15px;
+  }
+  .card1, .card2, .card3 {
+    width: 100%; /* на мобильных экранах карты занимают всю ширину */
+  }
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.icon {
+  font-size: 32px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.subtitle {
+  font-size: clamp(16px, 3vw, 20px);
+  margin: 0;
+  color: #fff;
+  font-weight: 600;
+}
+
+.text {
+  font-size: clamp(14px, 2.5vw, 16px);
+  color: #eee;
+  line-height: 1.6;
+  font-family: 'Roboto', sans-serif; 
+  font-weight: 500;                  
+  letter-spacing: 0;                 
+  text-align: center;                
+  margin: 0;                 
+}
+
+.buttonWrap {
+  margin-top: 100px; 
+}
+
+.btn {
+  display: inline-flex;          
+  align-items: center;           
+  gap: 10px;                     
+  padding: 14px 28px;
+  background: #104d41;
+  color: white;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background: #0d3f36;
+  transform: translateY(-2px);
+}
+
+.btnVector {
+  width: 24px;
+  height: 24px;
+}
