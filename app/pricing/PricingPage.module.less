@@ -1,0 +1,316 @@
+@bg: #f9f7f4;
+@ink: #2b2b2b;
+@muted: #6a6a72;
+@brand: #104d41;        // зелёный из CTA-блока
+@brand-2: #3a2d29;      // коричневый из темы
+@surface: #ffffff;
+@border: #e9e5e0;
+@shadow: 0 8px 24px rgba(0,0,0,.06);
+
+.page {
+  background: @bg;
+  color: @ink;
+}
+
+.hero {
+  padding: 56px 16px 24px;
+  background:
+          radial-gradient(1200px 600px at 50% -100%, fade(@brand, 6%), transparent),
+          @bg;
+  border-bottom: 1px solid @border;
+
+  .heroInner {
+    max-width: 1120px;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+.title {
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 800;
+  letter-spacing: .2px;
+  margin: 0 0 8px;
+}
+.subtitle {
+  color: @muted;
+  max-width: 720px;
+  margin: 0 auto 20px;
+  font-size: 16px;
+}
+
+.billingToggle {
+  display: inline-flex;
+  background: @surface;
+  border: 1px solid @border;
+  border-radius: 999px;
+  padding: 4px;
+  gap: 4px;
+  box-shadow: @shadow;
+}
+.toggleBtn {
+  border: 0;
+  background: transparent;
+  padding: 10px 16px;
+  border-radius: 999px;
+  color: @muted;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+
+  &:hover { color: @ink; }
+}
+.active {
+  background: fade(@brand, 12%);
+  color: @brand;
+}
+.save {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 8px;
+  background: fade(@brand, 12%);
+  color: @brand;
+  font-size: 12px;
+  border-radius: 999px;
+}
+
+/* Cards */
+.cards {
+  max-width: 1120px;
+  margin: 24px auto 32px;
+  padding: 0 16px;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(16px, 3vw, 28px);
+
+  @media (max-width: 960px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: @surface;
+  border: 1px solid @border;
+  border-radius: 20px;
+  padding: 22px;
+  box-shadow: @shadow;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.cardHighlight {
+  border-color: fade(@brand, 30%);
+  box-shadow: 0 12px 30px fade(@brand, 16%);
+}
+.cardSecondary {
+  border-color: fade(@brand-2, 24%);
+}
+
+.badge {
+  position: absolute;
+  top: -12px;
+  left: 20px;
+  background: @brand;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+  box-shadow: @shadow;
+}
+
+.cardTitle { font-size: 22px; font-weight: 800; margin: 6px 0; }
+.cardDesc  { color: @muted; line-height: 1.6; margin: 0 0 14px; }
+
+.priceWrap {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin: 4px 0 12px;
+}
+.currency { font-size: 18px; color: @ink; font-weight: 700; }
+.price { font-size: 40px; font-weight: 900; letter-spacing: .3px; }
+.period { color: @muted; }
+.billingNote { color: @brand; font-size: 12px; margin-left: 6px; }
+
+.cardBtn {
+  display: inline-block;
+  text-align: center;
+  margin: 8px 0 14px;
+  padding: 12px 16px;
+  background: @surface;
+  border: 1px solid @border;
+  border-radius: 12px;
+  font-weight: 700;
+  color: @ink;
+  transition: .2s ease;
+  &:hover { background: #fff; border-color: darken(@border, 6%); }
+}
+.cardBtnPrimary {
+  background: @brand;
+  color: #fff;
+  border-color: @brand;
+  &:hover { background: darken(@brand, 6%); border-color: darken(@brand, 6%); }
+}
+
+.list {
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+.listItem {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  color: @ink;
+}
+.check {
+  background: fade(@brand, 14%);
+  color: @brand;
+  border-radius: 6px;
+  font-weight: 900;
+  width: 22px;
+  height: 22px;
+  display: inline-grid;
+  place-items: center;
+  flex: 0 0 22px;
+}
+
+/* Comparison */
+.compare {
+  max-width: 1120px;
+  margin: 8px auto 36px;
+  padding: 0 16px;
+}
+.h2 {
+  font-size: 24px;
+  font-weight: 800;
+  margin: 0 0 12px;
+}
+.table {
+  background: @surface;
+  border: 1px solid @border;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: @shadow;
+}
+.row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  border-top: 1px solid @border;
+
+  &:first-child { border-top: 0; }
+}
+.header {
+  background: fade(@brand, 10%);
+  font-weight: 800;
+}
+.cell {
+  padding: 14px 16px;
+  font-size: 14px;
+  color: @ink;
+}
+.key { color: @muted; }
+
+/* FAQ */
+.faq {
+  max-width: 1120px;
+  margin: 0 auto 48px;
+  padding: 0 16px;
+}
+.faqGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr;
+  }
+}
+.faqItem {
+  background: @surface;
+  border: 1px solid @border;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: @shadow;
+}
+.faqQ {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  text-align: left;
+  padding: 14px 16px;
+  font-weight: 800;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.faqIcon {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: fade(@brand, 10%);
+  color: @brand;
+  display: inline-grid;
+  place-items: center;
+  font-weight: 900;
+}
+.faqA {
+  padding: 0 16px 14px;
+  color: @muted;
+  display: none;
+  line-height: 1.65;
+}
+.open .faqA { display: block; }
+
+/* CTA */
+.cta {
+  padding: 12px 16px 64px;
+}
+.ctaBox {
+  max-width: 1120px;
+  margin: 0 auto;
+  background: linear-gradient(180deg, fade(@brand, 14%), fade(@brand-2, 10%));
+  color: #fff;
+  border-radius: 20px;
+  padding: clamp(18px, 4vw, 28px);
+  display: grid;
+  gap: 8px;
+  box-shadow: @shadow;
+
+  h3 {
+    margin: 0;
+    font-size: clamp(20px, 3vw, 28px);
+    font-weight: 900;
+  }
+  p { margin: 0; opacity: .95; }
+}
+.ctaActions {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.primaryBtn {
+  background: #fff;
+  color: @brand-2;
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-weight: 800;
+  border: 0;
+  text-decoration: none;
+  &:hover { opacity: .9; }
+}
+.ghostBtn {
+  background: transparent;
+  color: #fff;
+  border: 1px solid fade(#fff, 60%);
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-weight: 800;
+  text-decoration: none;
+  &:hover { background: fade(#fff, 10%); }
+}

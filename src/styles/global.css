@@ -1,7 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap');
 
+:root {
+    --bg: #f8f2e9;
+    --card: #3b2f2f;
+}
+
 * {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
       Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
       'Segoe UI Symbol', 'Noto Color Emoji';
 } /* Изменил здесь шрифт, чтобы он соответствовал шрифту основного контента. */
+
+.ant-input,
+.ant-input-password {
+    border-radius: 10px !important;
+}

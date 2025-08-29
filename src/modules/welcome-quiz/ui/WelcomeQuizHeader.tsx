@@ -32,11 +32,6 @@ const WelcomeQuizHeader = () => {
 
   return (
     <Header className={classes.header}>
-      <div>
-      <Link href="/login">
-        <Button type="primary">Войти</Button>
-      </Link>
-      </div>
       <Flex className={classes.container} gap="middle" align="center" justify="center" vertical>
         <motion.div {...fadeScaleIn(1, 0)}>
           <Title className={classes.title}>KITSYNE</Title>
