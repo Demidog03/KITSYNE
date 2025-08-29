@@ -13,10 +13,10 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>
+      <body style={{display: 'flex',flexDirection: 'column', minHeight: '100vh'}}>
         <AntdRegistry>
           <CounterStoreProvider>
-            <main style={{ flex: 1 }}>{children}</main>
+            <main style={{ display: 'flex',flex: 1 }}>{children}</main>
             <Footer />
             </CounterStoreProvider>
         </AntdRegistry>
