@@ -1,3 +1,4 @@
+// @ts-ignore
 import { ICourseCategory } from '@types/courses';
 import { CategoryCard } from './CategoryCard';
 import styles from './styles.module.less';

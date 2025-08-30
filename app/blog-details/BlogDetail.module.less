@@ -1,6 +1,6 @@
 @bg: #fff;
 @muted: #6b7280;
-@brand: #4B6BFB;
+@brand: #4b6bfb;
 @chip: #f3f4f6;
 
 .container {
@@ -41,9 +41,11 @@
   font-size: 13px;
   border-radius: 999px;
   cursor: pointer;
-  transition: all .15s ease;
+  transition: all 0.15s ease;
 
-  &:hover { background: #f9fafb; }
+  &:hover {
+    background: #f9fafb;
+  }
 }
 
 .active {
@@ -65,10 +67,12 @@
   margin: 18px 0 10px;
   border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
-.image { /* object-fit задаём inline через style */ }
+.image {
+  /* object-fit задаём inline через style */
+}
 
 .metaBar {
   display: flex;
@@ -96,9 +100,18 @@
     align-items: center;
     gap: 12px;
 
-    span { color: @muted; font-size: 12px; }
-    a { color: @brand; font-size: 13px; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    span {
+      color: @muted;
+      font-size: 12px;
+    }
+    a {
+      color: @brand;
+      font-size: 13px;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
   }
 }
 
@@ -112,7 +125,7 @@
   h2 {
     font-size: 14px;
     text-transform: uppercase;
-    letter-spacing: .06em;
+    letter-spacing: 0.06em;
     color: @muted;
     margin: 0 0 6px;
   }
@@ -121,9 +134,16 @@
     padding-left: 18px;
     margin: 0;
 
-    li { margin: 6px 0; }
-    a { color: #1f2937; text-decoration: none; }
-    a:hover { color: @brand; }
+    li {
+      margin: 6px 0;
+    }
+    a {
+      color: #1f2937;
+      text-decoration: none;
+    }
+    a:hover {
+      color: @brand;
+    }
   }
 }
 
@@ -138,9 +158,14 @@
     margin: 28px 0 10px;
   }
 
-  p { margin: 10px 0; }
+  p {
+    margin: 10px 0;
+  }
 
-  ul, ol { margin: 12px 0 12px 22px; }
+  ul,
+  ol {
+    margin: 12px 0 12px 22px;
+  }
 
   .quote {
     background: #f9fafb;
@@ -165,14 +190,16 @@
 
   img {
     border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(0,0,0,.06);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
   }
 }
 
 .code {
   background: #0f172a;
   color: #e5e7eb;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+    monospace;
   padding: 14px;
   border-radius: 10px;
   overflow: auto;
@@ -191,7 +218,10 @@
     color: #111827;
   }
 
-  div { margin-top: 8px; color: #374151; }
+  div {
+    margin-top: 8px;
+    color: #374151;
+  }
 }
 
 .author {
@@ -209,8 +239,13 @@
     border-radius: 999px;
   }
 
-  h3 { margin: 0 0 6px; }
-  p { margin: 0; color: #374151; }
+  h3 {
+    margin: 0 0 6px;
+  }
+  p {
+    margin: 0;
+    color: #374151;
+  }
 }
 
 .newsletter {
@@ -221,8 +256,13 @@
   margin-top: 26px;
   text-align: center;
 
-  h3 { margin: 0 0 6px; }
-  p { margin: 0 0 12px; color: @muted; }
+  h3 {
+    margin: 0 0 6px;
+  }
+  p {
+    margin: 0 0 12px;
+    color: @muted;
+  }
 
   .form {
     display: flex;
@@ -247,14 +287,18 @@
       cursor: pointer;
     }
 
-    button:hover { opacity: .95; }
+    button:hover {
+      opacity: 0.95;
+    }
   }
 }
 
 .related {
   margin-top: 34px;
 
-  h2 { margin-bottom: 12px; }
+  h2 {
+    margin-bottom: 12px;
+  }
 
   .cards {
     display: grid;
@@ -267,19 +311,35 @@
     border: 1px solid #eee;
     border-radius: 12px;
     padding: 10px;
-    transition: transform .15s ease, box-shadow .15s ease;
+    transition:
+      transform 0.15s ease,
+      box-shadow 0.15s ease;
 
     &:hover {
       transform: translateY(-4px);
-      box-shadow: 0 10px 28px rgba(0,0,0,.08);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
     }
 
-    h3 { margin: 8px 0 4px; font-size: 16px; }
-    p { margin: 0; color: @muted; }
-    img { border-radius: 10px; width: 100%; height: auto; display: block; }
+    h3 {
+      margin: 8px 0 4px;
+      font-size: 16px;
+    }
+    p {
+      margin: 0;
+      color: @muted;
+    }
+    img {
+      border-radius: 10px;
+      width: 100%;
+      height: auto;
+      display: block;
+    }
   }
 }
 
 @media (max-width: 640px) {
-  .metaBar { flex-direction: column; align-items: flex-start; }
+  .metaBar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }

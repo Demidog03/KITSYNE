@@ -7,9 +7,9 @@ import TextArea from 'antd/es/input/TextArea';
 import Text from 'antd/es/typography/Text';
 import Title from 'antd/es/typography/Title';
 import kitsyne2dFullHeight from '@assets/images/kitsyne-2d-full-height.png';
+import kitsynefox2d from '@assets/images/kitsyne-fox-2d.png';
 import { questions } from '@modules/welcome-quiz/ui/welcomeFormQuestions';
 import classes from './WelcomeQuiz.module.less';
-import kitsynefox2d from '@assets/images/kitsyne-fox-2d.png';
 
 const { Content } = Layout;
 
@@ -79,12 +79,7 @@ const WelcomeQuizMain = () => {
           src={kitsyne2dFullHeight}
           alt="kitsyne 2d full height"
         />
-         <Image
-          className={classes.mainImage2}
-          priority
-          src={kitsynefox2d}
-          alt="kitsyne fox 2d"
-        />
+        <Image className={classes.mainImage2} priority src={kitsynefox2d} alt="kitsyne fox 2d" />
       </Flex>
     </Content>
   );

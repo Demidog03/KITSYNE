@@ -1,13 +1,13 @@
 /* Локальные CSS-переменные объявляем на корневом классе,
    чтобы избежать ошибки "pure selector" в CSS-modules */
 .pricing {
-  --bg: #f9f5ef;           /* светлый фон секции */
-  --card: #3a2d29;         /* коричневые карточки */
+  --bg: #f9f5ef; /* светлый фон секции */
+  --card: #3a2d29; /* коричневые карточки */
   --card-2: #433530;
   --text: #2b2b2b;
   --muted: #6b6461;
-  --accent: #d6a97a;       /* теплый акцент */
-  --brand: #0f4d3f;        /* зелёная кнопка */
+  --accent: #d6a97a; /* теплый акцент */
+  --brand: #0f4d3f; /* зелёная кнопка */
   --brand-700: #0c3d33;
   --ring: rgba(16, 77, 65, 0.18);
 
@@ -41,7 +41,7 @@
   font-size: clamp(22px, 3.6vw, 36px);
   font-weight: 800;
   color: var(--text);
-  letter-spacing: .2px;
+  letter-spacing: 0.2px;
 }
 
 .toggle {
@@ -62,13 +62,13 @@
   font-weight: 600;
   color: var(--muted);
   cursor: pointer;
-  transition: all .2s ease;
+  transition: all 0.2s ease;
 }
 
 .active {
   background: var(--brand);
   color: #fff;
-  box-shadow: 0 6px 16px rgba(15, 77, 63, .25);
+  box-shadow: 0 6px 16px rgba(15, 77, 63, 0.25);
 }
 
 .save {
@@ -106,8 +106,8 @@
   color: #eee;
   border-radius: 18px;
   padding: 22px 20px;
-  box-shadow: 0 10px 28px rgba(0, 0, 0, .18);
-  border: 1px solid rgba(255, 255, 255, .06);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.06);
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -117,8 +117,8 @@
 .popular {
   outline: 2px solid var(--accent);
   box-shadow:
-          0 14px 34px rgba(214, 169, 122, .25),
-          0 10px 26px rgba(0,0,0,.18);
+    0 14px 34px rgba(214, 169, 122, 0.25),
+    0 10px 26px rgba(0, 0, 0, 0.18);
 }
 
 .badge {
@@ -133,12 +133,13 @@
   border-radius: 999px;
 }
 
-.cardHead {}
+.cardHead {
+}
 
 .cardTitle {
   font-size: 18px;
   font-weight: 800;
-  letter-spacing: .3px;
+  letter-spacing: 0.3px;
 }
 
 .tagline {
@@ -157,7 +158,7 @@
 
 .currency {
   font-size: 20px;
-  opacity: .9;
+  opacity: 0.9;
 }
 
 .price {
@@ -200,8 +201,8 @@
   display: inline-grid;
   place-items: center;
   border-radius: 50%;
-  background: rgba(214, 169, 122, .18);
-  border: 1px solid rgba(214, 169, 122, .4);
+  background: rgba(214, 169, 122, 0.18);
+  border: 1px solid rgba(214, 169, 122, 0.4);
   color: var(--accent);
   font-size: 12px;
 }
@@ -214,15 +215,18 @@
   border-radius: 12px;
   background: var(--brand);
   color: #fff;
-  border: 1px solid rgba(255,255,255,.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   font-weight: 700;
   cursor: pointer;
-  transition: transform .08s ease, box-shadow .2s ease, background .2s ease;
+  transition:
+    transform 0.08s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
 }
 
 .cta:hover {
   background: var(--brand-700);
-  box-shadow: 0 10px 22px rgba(15, 77, 63, .28);
+  box-shadow: 0 10px 22px rgba(15, 77, 63, 0.28);
   transform: translateY(-1px);
 }
 

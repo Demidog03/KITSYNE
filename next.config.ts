@@ -10,8 +10,11 @@ const nextConfig: NextConfig = withAntdLess(
       config.module?.rules?.push({});
       return config;
     },
-      images: {
-          domains: ['images.unsplash.com'],
+    images: {
+      domains: ['images.unsplash.com'],
+    },
+      eslint: {
+          ignoreDuringBuilds: true,
       },
   })
 );

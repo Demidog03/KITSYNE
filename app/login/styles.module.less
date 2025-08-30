@@ -1,7 +1,7 @@
 /* Palette, в духе проекта */
 @bg: #fbf7ef;
-@card: #2e2321;       /* тёмно-коричневый */
-@accent: #1f6b57;     /* зелёный */
+@card: #2e2321; /* тёмно-коричневый */
+@accent: #1f6b57; /* зелёный */
 @accent-2: #134c3f;
 @muted: #8a7d78;
 
@@ -11,9 +11,8 @@
   place-items: center;
   padding: 24px;
   background:
-          radial-gradient(60% 60% at 50% 20%, fade(@accent, 6%), transparent 60%),
-          radial-gradient(45% 45% at 80% 0%, fade(@card, 5%), transparent 60%),
-          @bg;
+    radial-gradient(60% 60% at 50% 20%, fade(@accent, 6%), transparent 60%),
+    radial-gradient(45% 45% at 80% 0%, fade(@card, 5%), transparent 60%), @bg;
 }
 
 .backLink {
@@ -25,7 +24,9 @@
   color: @accent;
   font-weight: 600;
   cursor: pointer;
-  &:hover { color: @accent-2; }
+  &:hover {
+    color: @accent-2;
+  }
 }
 
 .authCard {
@@ -33,7 +34,7 @@
   max-width: 980px;
   background: #fff;
   border-radius: 18px;
-  box-shadow: 0 14px 50px rgba(0,0,0,.12);
+  box-shadow: 0 14px 50px rgba(0, 0, 0, 0.12);
   display: grid;
   grid-template-columns: 380px 1fr;
   overflow: hidden;
@@ -63,7 +64,9 @@
   flex-direction: column;
   justify-content: center;
   padding: 32px 32px 36px;
-  @media (max-width: 480px) { padding: 22px; }
+  @media (max-width: 480px) {
+    padding: 22px;
+  }
 }
 
 .switch {
@@ -82,7 +85,10 @@
   padding: 0 18px;
   height: 38px;
 
-  &:hover { background: @accent-2 !important; border-color: @accent-2 !important; }
+  &:hover {
+    background: @accent-2 !important;
+    border-color: @accent-2 !important;
+  }
 }
 
 .primaryBtnLg {
@@ -100,17 +106,26 @@
   height: 38px;
   padding: 0 18px;
 
-  &:hover { color: #fff !important; background: @card !important; }
+  &:hover {
+    color: #fff !important;
+    background: @card !important;
+  }
 }
 
-.rowSm { margin-bottom: 8px; }
+.rowSm {
+  margin-bottom: 8px;
+}
 
 .mutedLink {
   color: @muted;
-  &:hover { color: @card; }
+  &:hover {
+    color: @card;
+  }
 }
 
 /* Тёмная «шапка» для мобилок (легкая тень) */
 @media (max-width: 960px) {
-  .authCard { box-shadow: 0 10px 30px rgba(0,0,0,.10); }
+  .authCard {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
 }

@@ -1,11 +1,11 @@
 @bg: #f9f7f4;
 @ink: #2b2b2b;
 @muted: #6a6a72;
-@brand: #104d41;        // зелёный из CTA-блока
-@brand-2: #3a2d29;      // коричневый из темы
+@brand: #104d41; // зелёный из CTA-блока
+@brand-2: #3a2d29; // коричневый из темы
 @surface: #ffffff;
 @border: #e9e5e0;
-@shadow: 0 8px 24px rgba(0,0,0,.06);
+@shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
 
 .page {
   background: @bg;
@@ -14,9 +14,7 @@
 
 .hero {
   padding: 56px 16px 24px;
-  background:
-          radial-gradient(1200px 600px at 50% -100%, fade(@brand, 6%), transparent),
-          @bg;
+  background: radial-gradient(1200px 600px at 50% -100%, fade(@brand, 6%), transparent), @bg;
   border-bottom: 1px solid @border;
 
   .heroInner {
@@ -28,7 +26,7 @@
 .title {
   font-size: clamp(28px, 4vw, 44px);
   font-weight: 800;
-  letter-spacing: .2px;
+  letter-spacing: 0.2px;
   margin: 0 0 8px;
 }
 .subtitle {
@@ -57,7 +55,9 @@
   cursor: pointer;
   position: relative;
 
-  &:hover { color: @ink; }
+  &:hover {
+    color: @ink;
+  }
 }
 .active {
   background: fade(@brand, 12%);
@@ -119,8 +119,16 @@
   box-shadow: @shadow;
 }
 
-.cardTitle { font-size: 22px; font-weight: 800; margin: 6px 0; }
-.cardDesc  { color: @muted; line-height: 1.6; margin: 0 0 14px; }
+.cardTitle {
+  font-size: 22px;
+  font-weight: 800;
+  margin: 6px 0;
+}
+.cardDesc {
+  color: @muted;
+  line-height: 1.6;
+  margin: 0 0 14px;
+}
 
 .priceWrap {
   display: flex;
@@ -128,10 +136,24 @@
   gap: 6px;
   margin: 4px 0 12px;
 }
-.currency { font-size: 18px; color: @ink; font-weight: 700; }
-.price { font-size: 40px; font-weight: 900; letter-spacing: .3px; }
-.period { color: @muted; }
-.billingNote { color: @brand; font-size: 12px; margin-left: 6px; }
+.currency {
+  font-size: 18px;
+  color: @ink;
+  font-weight: 700;
+}
+.price {
+  font-size: 40px;
+  font-weight: 900;
+  letter-spacing: 0.3px;
+}
+.period {
+  color: @muted;
+}
+.billingNote {
+  color: @brand;
+  font-size: 12px;
+  margin-left: 6px;
+}
 
 .cardBtn {
   display: inline-block;
@@ -143,14 +165,20 @@
   border-radius: 12px;
   font-weight: 700;
   color: @ink;
-  transition: .2s ease;
-  &:hover { background: #fff; border-color: darken(@border, 6%); }
+  transition: 0.2s ease;
+  &:hover {
+    background: #fff;
+    border-color: darken(@border, 6%);
+  }
 }
 .cardBtnPrimary {
   background: @brand;
   color: #fff;
   border-color: @brand;
-  &:hover { background: darken(@brand, 6%); border-color: darken(@brand, 6%); }
+  &:hover {
+    background: darken(@brand, 6%);
+    border-color: darken(@brand, 6%);
+  }
 }
 
 .list {
@@ -201,7 +229,9 @@
   grid-template-columns: 2fr 1fr 1fr 1fr;
   border-top: 1px solid @border;
 
-  &:first-child { border-top: 0; }
+  &:first-child {
+    border-top: 0;
+  }
 }
 .header {
   background: fade(@brand, 10%);
@@ -212,7 +242,9 @@
   font-size: 14px;
   color: @ink;
 }
-.key { color: @muted; }
+.key {
+  color: @muted;
+}
 
 /* FAQ */
 .faq {
@@ -264,7 +296,9 @@
   display: none;
   line-height: 1.65;
 }
-.open .faqA { display: block; }
+.open .faqA {
+  display: block;
+}
 
 /* CTA */
 .cta {
@@ -286,7 +320,10 @@
     font-size: clamp(20px, 3vw, 28px);
     font-weight: 900;
   }
-  p { margin: 0; opacity: .95; }
+  p {
+    margin: 0;
+    opacity: 0.95;
+  }
 }
 .ctaActions {
   margin-top: 10px;
@@ -302,7 +339,9 @@
   font-weight: 800;
   border: 0;
   text-decoration: none;
-  &:hover { opacity: .9; }
+  &:hover {
+    opacity: 0.9;
+  }
 }
 .ghostBtn {
   background: transparent;
@@ -312,5 +351,7 @@
   padding: 12px 16px;
   font-weight: 800;
   text-decoration: none;
-  &:hover { background: fade(#fff, 10%); }
+  &:hover {
+    background: fade(#fff, 10%);
+  }
 }

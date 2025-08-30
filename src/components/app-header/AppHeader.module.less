@@ -3,11 +3,11 @@
   top: 0;
   z-index: 100;
   background: #fff;
-  transition: box-shadow .2s ease;
+  transition: box-shadow 0.2s ease;
 }
 
 .headerShadow {
-  box-shadow: 0 4px 16px rgba(0,0,0,.06);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
 }
 
 .inner {
@@ -44,7 +44,9 @@
   padding: 8px 10px;
   border-radius: 8px;
   text-decoration: none;
-  transition: background .15s ease, color .15s ease;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
 }
 .navLink:hover {
   background: #f5f5f5;
@@ -68,9 +70,15 @@
 
 /* Мобильный */
 @media (max-width: 900px) {
-  .nav { display: none; }
-  .search { display: none; }
-  .burger { display: inline-flex !important; }
+  .nav {
+    display: none;
+  }
+  .search {
+    display: none;
+  }
+  .burger {
+    display: inline-flex !important;
+  }
 }
 
 .mobileLink {

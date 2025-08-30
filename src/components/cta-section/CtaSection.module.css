@@ -1,92 +1,92 @@
 .section {
-    padding: 80px 20px;
-    background: #2b1f1b; /* тёмно-коричневый фон */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  padding: 80px 20px;
+  background: #2b1f1b; /* тёмно-коричневый фон */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card {
-    background: #3b2f2f; /* коричневый блок */
-    color: #fff;
-    padding: 40px;
-    border-radius: 16px;
-    max-width: 720px;
-    text-align: center;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  background: #3b2f2f; /* коричневый блок */
+  color: #fff;
+  padding: 40px;
+  border-radius: 16px;
+  max-width: 720px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
 }
 
 .badge {
-    display: inline-block;
-    background: #5a3e36;
-    color: #e0e0e0;
-    font-size: 14px;
-    padding: 6px 14px;
-    border-radius: 20px;
-    margin-bottom: 20px;
+  display: inline-block;
+  background: #5a3e36;
+  color: #e0e0e0;
+  font-size: 14px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 20px;
 }
 
 .title {
-    font-size: clamp(24px, 4vw, 36px);
-    font-weight: 700;
-    margin-bottom: 12px;
+  font-size: clamp(24px, 4vw, 36px);
+  font-weight: 700;
+  margin-bottom: 12px;
 }
 
 .highlight {
-    color: #d4af37; /* золотистый акцент */
+  color: #d4af37; /* золотистый акцент */
 }
 
 .subtitle {
-    font-size: 16px;
-    color: #e8e6e3;
-    margin-bottom: 24px;
+  font-size: 16px;
+  color: #e8e6e3;
+  margin-bottom: 24px;
 }
 
 .features {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    font-size: 15px;
-    margin-bottom: 28px;
-    text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 15px;
+  margin-bottom: 28px;
+  text-align: left;
 }
 
 .actions {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 20px;
 }
 
 .btn {
-    padding: 12px 24px;
-    border-radius: 25px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.3s ease;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 .primary {
-    background: #0d3f36; /* зелёный CTA */
-    color: #fff;
+  background: #0d3f36; /* зелёный CTA */
+  color: #fff;
 }
 
 .primary:hover {
-    background: #145c4b;
+  background: #145c4b;
 }
 
 .secondary {
-    background: transparent;
-    border: 2px solid #d4af37;
-    color: #d4af37;
+  background: transparent;
+  border: 2px solid #d4af37;
+  color: #d4af37;
 }
 
 .secondary:hover {
-    background: #d4af37;
-    color: #2b1f1b;
+  background: #d4af37;
+  color: #2b1f1b;
 }
 
 .note {
-    font-size: 13px;
-    color: #cfcfcf;
+  font-size: 13px;
+  color: #cfcfcf;
 }

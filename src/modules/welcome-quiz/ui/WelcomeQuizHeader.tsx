@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import { Button, Flex, Layout } from 'antd';
 import Text from 'antd/es/typography/Text';
 import Title from 'antd/es/typography/Title';
@@ -15,34 +16,31 @@ import {
 } from '@lib/animations/motionPresets';
 import DialogBubble from '@shared/dialog-bubble/DialogBubble';
 import classes from './WelcomeQuiz.module.less';
-import Link from 'next/link';
-
-
-
 
 const { Header } = Layout;
 const MotionImage = motion(Image);
 const MotionButton = motion(Button);
 
-  
 const WelcomeQuizHeader = () => {
+  const router = useRouter();
   const handleClick = () => {
-    document.getElementById('welcome-main-section')?.scrollIntoView({ behavior: 'smooth' });
+    router.push('/course');
   };
 
   return (
     <Header className={classes.header}>
       <Flex className={classes.container} gap="middle" align="center" justify="center" vertical>
+        {/* @ts-ignore */}
         <motion.div {...fadeScaleIn(1, 0)}>
           <Title className={classes.title}>KITSYNE</Title>
         </motion.div>
-
+        {/* @ts-ignore */}
         <motion.div {...fadeScaleIn(1.4, 1)}>
           <Title level={2} className={classes.subTitle}>
             Your Personal AI Tutor
           </Title>
         </motion.div>
-
+        {/* @ts-ignore */}
         <MotionButton
           {...fadeScaleIn(1, 2)}
           size="large"

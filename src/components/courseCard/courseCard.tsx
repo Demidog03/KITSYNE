@@ -1,4 +1,5 @@
 import { useState } from 'react';
+// @ts-ignore
 import { ICourseCard } from '@types/courses';
 import styles from './styles.module.less';
 

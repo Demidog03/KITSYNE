@@ -1,0 +1,131 @@
+@kitsyneGreen: #0f5132; // primary accent
+@kitsyneMint: #e8f5ef; // soft bg
+@kitsyneBlue: #1677ff;
+
+.wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 24px 16px 64px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.headerIcon {
+  font-size: 28px;
+  color: @kitsyneGreen;
+}
+
+.title {
+  margin: 8px 0 0;
+}
+
+.subtitle {
+  margin-top: 4px;
+}
+
+.searchBar {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  backdrop-filter: blur(6px);
+  padding: 12px 0;
+}
+
+.tagsScroll {
+  margin: 8px 0 16px;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding-bottom: 6px;
+
+  &::-webkit-scrollbar {
+    height: 6px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #e6e6e6;
+    border-radius: 999px;
+  }
+}
+
+.tag {
+  padding: 6px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.content {
+  margin-top: 8px;
+}
+
+.collapse {
+  background: #fff;
+  border-radius: 12px;
+
+  :global(.ant-collapse-item) {
+    border-radius: 12px !important;
+    margin-bottom: 10px;
+    overflow: hidden;
+    border: 1px solid #f0f0f0;
+  }
+
+  :global(.ant-collapse-header) {
+    padding: 14px 16px !important;
+    align-items: center !important;
+  }
+
+  :global(.ant-collapse-content-box) {
+    padding: 8px 16px 16px !important;
+    color: rgba(0, 0, 0, 0.65);
+  }
+}
+
+.rowTag {
+  margin-left: 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  color: @kitsyneGreen;
+  border-color: fade(@kitsyneGreen, 40%);
+  background: @kitsyneMint;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 16px;
+  margin-top: 20px;
+
+  @media (max-width: 960px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.supportCard {
+  border-radius: 14px;
+  background: radial-gradient(120% 120% at 0% 0%, @kitsyneMint 0%, #fff 60%);
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.06);
+
+  :global(.ant-btn-primary) {
+    background: @kitsyneGreen;
+    border-color: @kitsyneGreen;
+
+    &:hover {
+      filter: brightness(0.95);
+    }
+  }
+}
+
+.tipsCard {
+  border-radius: 14px;
+}
+
+.ul {
+  padding-left: 18px;
+  margin: 8px 0 0;
+
+  li {
+    margin-bottom: 6px;
+  }
+}

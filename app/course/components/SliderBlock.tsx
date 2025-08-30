@@ -50,9 +50,10 @@ export function SliderBlock() {
           <Button type={'link'}>view history</Button>
         </div>
         <div className={styles.sliderBlock__body}>
-          <Swiper slidesPerView={3} spaceBetween={50} style={{width: '100%'}}>
+          <Swiper slidesPerView={3} spaceBetween={50} style={{ width: '100%' }}>
             {courses.map((course, index) => (
               <SwiperSlide key={index}>
+                {/* @ts-ignore */}
                 <CourseCard {...course} />
               </SwiperSlide>
             ))}

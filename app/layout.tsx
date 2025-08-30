@@ -2,8 +2,8 @@ import 'antd/dist/reset.css';
 import { CounterStoreProvider } from '@/modules/counter/model/counter-store-provider';
 import { AntdRegistry } from '@ant-design/nextjs-registry';
 import '@ant-design/v5-patch-for-react-19';
-import '@styles/global.css';
 import Footer from '@components/Footer';
+import '@styles/global.css';
 
 export const metadata = {
   title: 'KITSYNE',
@@ -13,12 +13,12 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body style={{display: 'flex',flexDirection: 'column', minHeight: '100vh'}}>
+      <body style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
         <AntdRegistry>
           <CounterStoreProvider>
-            <main style={{ display: 'flex',flex: 1 }}>{children}</main>
+            <main>{children}</main>
             <Footer />
-            </CounterStoreProvider>
+          </CounterStoreProvider>
         </AntdRegistry>
       </body>
     </html>

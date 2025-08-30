@@ -3,7 +3,7 @@
   --card: #ffffff;
   --text: #24262b;
   --muted: #6b7280;
-  --primary: #2f9e8f;      /* акцент (зелёный/бирюза) */
+  --primary: #2f9e8f; /* акцент (зелёный/бирюза) */
   --primary-600: #248578;
   --stroke: #e7ebf1;
   --chip: #e9f6f3;
@@ -31,7 +31,9 @@
   overflow: auto;
 }
 
-.sidebarGroup + .sidebarGroup { margin-top: 18px; }
+.sidebarGroup + .sidebarGroup {
+  margin-top: 18px;
+}
 
 .sidebarTitle {
   font-weight: 700;
@@ -39,7 +41,10 @@
   margin-bottom: 10px;
 }
 
-.list { display: grid; gap: 8px; }
+.list {
+  display: grid;
+  gap: 8px;
+}
 
 .item {
   display: grid;
@@ -52,12 +57,18 @@
   padding: 10px 12px;
 }
 
-.item:hover { border-color: #dbe3ef; }
+.item:hover {
+  border-color: #dbe3ef;
+}
 
-.quiz { background: #fff7ed; }
+.quiz {
+  background: #fff7ed;
+}
 
 .dot {
-  width: 8px; height: 8px; border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
   background: var(--primary);
 }
 
@@ -72,7 +83,10 @@
 }
 
 /* MAIN */
-.main { display: grid; gap: 18px; }
+.main {
+  display: grid;
+  gap: 18px;
+}
 
 .header {
   display: flex;
@@ -80,8 +94,13 @@
   align-items: flex-start;
 }
 
-.title { font-size: 26px; font-weight: 800; }
-.subtitle { color: var(--muted); }
+.title {
+  font-size: 26px;
+  font-weight: 800;
+}
+.subtitle {
+  color: var(--muted);
+}
 
 .badge {
   background: var(--chip);
@@ -108,9 +127,19 @@
 }
 
 /* Sections */
-.section { background: var(--card); border: 1px solid var(--stroke); border-radius: 12px; padding: 16px; }
-.sectionTitle { font-weight: 800; margin-bottom: 8px; }
-.text { color: var(--muted); }
+.section {
+  background: var(--card);
+  border: 1px solid var(--stroke);
+  border-radius: 12px;
+  padding: 16px;
+}
+.sectionTitle {
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+.text {
+  color: var(--muted);
+}
 
 /* Review */
 .review {
@@ -128,29 +157,57 @@
 }
 
 .reviewer {
-  display: flex; align-items: center; gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .avatar {
-  width: 36px; height: 36px; border-radius: 50%;
-  background: #f2c18a; display: grid; place-items: center; font-weight: 800;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #f2c18a;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
 }
 
-.name { font-weight: 700; }
-.stars { color: #f59e0b; font-size: 14px; }
-.moreBtn { background: transparent; border: 0; font-size: 20px; cursor: pointer; }
+.name {
+  font-weight: 700;
+}
+.stars {
+  color: #f59e0b;
+  font-size: 14px;
+}
+.moreBtn {
+  background: transparent;
+  border: 0;
+  font-size: 20px;
+  cursor: pointer;
+}
 
-.reviewText { color: #6b5b4a; }
+.reviewText {
+  color: #6b5b4a;
+}
 
 /* Section head with controls */
 .sectionHead {
-  display: flex; justify-content: space-between; align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-top: 6px;
 }
-.controls { display: flex; gap: 8px; }
+.controls {
+  display: flex;
+  gap: 8px;
+}
 .ctrlBtn {
-  width: 34px; height: 34px; border-radius: 10px;
-  border: 1px solid var(--stroke); background: var(--card); cursor: pointer;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  border: 1px solid var(--stroke);
+  background: var(--card);
+  cursor: pointer;
 }
 
 /* Cards */
@@ -168,49 +225,110 @@
   display: grid;
 }
 
-.thumbWrap { position: relative; height: 170px; overflow: hidden; }
-.thumb { width: 100%; height: 100%; object-fit: cover; display: block; }
+.thumbWrap {
+  position: relative;
+  height: 170px;
+  overflow: hidden;
+}
+.thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
 .tag {
-  position: absolute; left: 10px; top: 10px;
-  background: #111827; color: #fff; font-size: 12px;
-  padding: 4px 8px; border-radius: 999px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  background: #111827;
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 999px;
 }
 .timePill {
-  position: absolute; right: 10px; bottom: 10px;
-  background: var(--chip); color: var(--primary-600); font-size: 12px;
-  padding: 4px 8px; border-radius: 999px; border: 1px solid #cbeae5;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  background: var(--chip);
+  color: var(--primary-600);
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  border: 1px solid #cbeae5;
 }
 
-.cardBody { padding: 12px; display: grid; gap: 10px; }
-.cardTitle { font-weight: 800; line-height: 1.25; }
+.cardBody {
+  padding: 12px;
+  display: grid;
+  gap: 10px;
+}
+.cardTitle {
+  font-weight: 800;
+  line-height: 1.25;
+}
 
 .metaRow {
-  display: flex; align-items: center; justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.metaLeft { display: flex; align-items: center; gap: 8px; }
+.metaLeft {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
 .metaAvatar {
-  width: 26px; height: 26px; border-radius: 50%;
-  background: #e5e7eb; display: grid; place-items: center; font-weight: 700;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #e5e7eb;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
   font-size: 12px;
 }
-.metaText { color: var(--muted); font-size: 12px; }
-.price { font-weight: 800; }
+.metaText {
+  color: var(--muted);
+  font-size: 12px;
+}
+.price {
+  font-weight: 800;
+}
 
 /* Responsive */
 @media (max-width: 1200px) {
-  .wrap { grid-template-columns: 280px 1fr; }
-  .player { height: 460px; }
+  .wrap {
+    grid-template-columns: 280px 1fr;
+  }
+  .player {
+    height: 460px;
+  }
 }
 
 @media (max-width: 1024px) {
-  .wrap { grid-template-columns: 1fr; }
-  .sidebar { position: relative; top: 0; max-height: none; }
-  .cardsGrid { grid-template-columns: repeat(2, 1fr); }
-  .player { height: 420px; }
+  .wrap {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    position: relative;
+    top: 0;
+    max-height: none;
+  }
+  .cardsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .player {
+    height: 420px;
+  }
 }
 
 @media (max-width: 640px) {
-  .player { height: 240px; }
-  .cardsGrid { grid-template-columns: 1fr; }
+  .player {
+    height: 240px;
+  }
+  .cardsGrid {
+    grid-template-columns: 1fr;
+  }
 }
